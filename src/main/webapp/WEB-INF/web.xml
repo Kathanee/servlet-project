@@ -6,11 +6,19 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>FirstServlet</servlet-name>
-    <servlet-class>com.java.servletpackage.ServletClass</servlet-class>
+    <servlet-class>com.java.servletpackage.servletclass.ServletClass</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FirstServlet</servlet-name>
     <url-pattern>/name</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServiceServlet</servlet-name>
+    <servlet-class>com.java.servletpackage.servletclass.ServiceClass</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServiceServlet</servlet-name>
+    <url-pattern>/service</url-pattern>
   </servlet-mapping>
 
 <filter>
@@ -29,4 +37,11 @@
     <filter-name>ServiceFilter</filter-name>
     <url-pattern>/service</url-pattern>
   </filter-mapping>
+  
+  <listener>
+    <listener-class>com.java.servletpackage.servletlistener.HomeContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.java.servletpackage.servletlistener.RequestContextListener</listener-class>
+  </listener>
 </web-app>
